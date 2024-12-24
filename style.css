@@ -17,8 +17,8 @@ body {
   }
   
   .logo {
-    font-size: 24px;
-    font-weight: bold;
+    font-size: 12px;
+    font-weight: italic;
   }
   
   .navbar a {
@@ -49,6 +49,10 @@ body {
   .hero h1 {
     font-size: 64px;
     line-height: 1.2;
+  }
+
+  .hero h4 {
+     line-height: 0.5
   }
   
   /* Categories Section */
