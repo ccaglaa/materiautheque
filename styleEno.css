@@ -1,0 +1,78 @@
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'Krungthep';
+    src: url('fonts/krungthep\ 2.ttf') format('truetype');
+  }
+
+ul {
+    color: #d2e8da;
+}
+
+a {
+    color:#8ec3d3;
+    text-decoration: none;
+}
+
+
+
+body {
+    font-family: 'Krungthep';
+    background-color: #d2e8da;
+    color: #333;
+  }
+  
+  #sommaire {
+    color: #d2e8da;
+    width: 370px;
+    height: 500px;
+    background-color: #1d3e4c;
+    padding: 20px;
+  }
+  
+  section {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+  }
+
+p {
+    font-size: 13px;
+    font-family: 'Andale Mono';
+    font-weight: bold;
+}
+ 
+.column {
+    width: 500px;
+    height: 350px;
+    padding: 20px;
+    text-align: justify;
+    border: 1px solid #ddd;
+  }
+
+#section5 {
+    display: flex; /* Set up flexbox */
+    justify-content: space-between; /* Distribute space between columns */
+    gap: 20px; /* Optional: add space between columns */
+    padding: 50px;
+    background-color: #d1d2dc;
+    height: 500px;
+    box-shadow: 15px 15px #1d3e4c;
+    overflow: hidden; 
+}
+
+#section5 img{
+    max-width: 100%;  /* Make sure the image scales within the container */
+    max-height: 100%;
+    top: 10px;
+    left: 10px;
+}
+
+#section5 h2 {
+    top: 10px;
+    left: 10px;
+          /* Add some margin for spacing */
+}
