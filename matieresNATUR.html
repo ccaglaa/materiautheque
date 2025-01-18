@@ -3,26 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sommaire</title>
-  <style>
-    body {
-      font-family: 'Times New Roman', Times, serif;
-      line-height: 1.5;
-    }
-    #sommaire {
-      margin-bottom: 20px;
-    }
-    section {
-      margin-top: 100px;
-      padding: 20px;
-      border: 1px solid #ddd;
-    }
-  </style>
+  <title>Matieres Naturelles</title>
+  <link rel="stylesheet" href="stylematNATUR.css">
 </head>
 <body>
 
+  <!-- Hamburger Menu Button -->
+  <div class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
   <!-- Table of Contents -->
-  <div id="sommaire">
+  <div id="sommaire" class="hidden">
     <h2>Matieres Naturelles</h2>
     <ol>
       <li><a href="#section1">Fibres</a>
@@ -80,7 +74,7 @@
         <li>Onion skin→ jaune roseâtre</li>
         <li>Phellodendron amurense → jaune</li>
         <li>Punica granatum →jeune tabac</li>
-        <li>Racines d’orcanette </li>
+        <li>Racines d'orcanette </li>
         <li>Rhus javanica → blanc crème</li>
         <li>Sophora japonica → jaune plus verdâtre </li>
         <li>Terminalia chebula → jaune blanchâtre</li>
@@ -166,6 +160,15 @@
     
     
   </section>
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const sommaire = document.getElementById('sommaire');
+    
+    hamburger.addEventListener('click', () => {
+      sommaire.classList.toggle('hidden');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
