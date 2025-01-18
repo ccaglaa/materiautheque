@@ -39,8 +39,6 @@ body {
   }
   
   section {
-    margin: 90px;
-    padding: 10px;
     /*border: 1px solid #ddd;*/
     border-radius: 0px;
     background-color: #d1d2dc;
@@ -49,6 +47,7 @@ body {
     max-width: 1200px;
     margin: 50px ;
     padding: 50px;
+    min-height: 500px;
   }
 
 p {
