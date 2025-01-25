@@ -15,23 +15,27 @@ body {
   /* Header Styling */
   .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
     background-color: #d2e8da;
     border-bottom: 1px solid #d2e8da;
+    position: relative;
+    justify-content: center; /* Center the menu */
   }
   
   .logo {
+    position: absolute;
+    left: 50px;
     font-size: 16px;
     font-style: italic;
   }
   
   .navbar a {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0;
     text-decoration: none;
     color: #1d3e4c;
+    width: auto; /* Let it be as wide as needed */
   }
   
   .navbar a:hover {
@@ -122,10 +126,10 @@ body {
 
   #menu {
     margin: 0 200px;
-    background: #FFFFFF;
+    background: #d2e8da;
     height: 49px;
     border-radius: 0px;
-    border: 1px solid #1d3e4c;
+    justify-content: center; /* Center the menu */
   }
   #menu ul, #menu li {
     margin: 0 auto;
@@ -133,8 +137,10 @@ body {
     list-style: none
   }
   #menu ul {
-    width: 100%;
+    width: auto;
     text-align: center;
+    gap: 20px; /* Adds consistent spacing between menu items */
+    white-space: nowrap; /* Prevent menu items from wrapping */
   }
   #menu li {
     display: inline-block;
@@ -180,8 +186,8 @@ body {
   }
   #menu ul.sub-menus{
     height: auto;
-    overflow: hidden;
-    width: 170px;
+    overflow: visible;
+    width: auto;
     background: #1d3e4c;
     position: absolute;
     z-index: 99;
@@ -191,10 +197,12 @@ body {
     display: block;
     text-align: left;
     width: 100%;
+
   }
   #menu ul.sub-menus a {
     color: #d2e8da;
     font-size: 14px;
+    white-space: normal; /* Allow text to wrap */
   }
   #menu li:hover ul.sub-menus {
     display: block
