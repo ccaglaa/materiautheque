@@ -3,26 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sommaire</title>
-  <style>
-    body {
-      font-family: 'Times New Roman', Times, serif;
-      line-height: 1.5;
-    }
-    #sommaire {
-      margin-bottom: 20px;
-    }
-    section {
-      margin-top: 100px;
-      padding: 20px;
-      border: 1px solid #ddd;
-    }
-  </style>
+  <title>Synthétiques</title>
+  <link rel="stylesheet" href="styleSYNTH.css">
 </head>
 <body>
 
+  <!-- Hamburger Menu Button -->
+  <div class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
   <!-- Table of Contents -->
-  <div id="sommaire">
+  <div id="sommaire" class="hidden">
     <h2>Synthétique</h2>
     <ol>
       <li><a href="#section1">Bases d'Impressions</a></li>
@@ -107,6 +101,15 @@
     </p>
   
   </section>
+  <script>
+    const hamburger = document.querySelector('.hamburger-menu');
+    const sommaire = document.getElementById('sommaire');
+    
+    hamburger.addEventListener('click', () => {
+      sommaire.classList.toggle('hidden');
+      hamburger.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
