@@ -173,3 +173,45 @@ p {
 section {
   margin-left: 20px;
 } 
+
+/* Home Icon */
+.home-icon {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  color: #1d3e4c;
+  background-color: #d2e8da;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.home-icon:hover {
+  color: #0c2a35;
+}
+
+/* Scroll to Top Arrow */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #1d3e4c;
+  background-color: #d2e8da;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top.show {
+  opacity: 1;
+}
+
+.scroll-to-top:hover {
+  color: #0c2a35;
+}
