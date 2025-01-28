@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sommaire</title>
-  <style>
-    body {
-      font-family: 'Times New Roman', Times, serif;
-      line-height: 1.5;
-    }
-    #sommaire {
-      margin-bottom: 20px;
-    }
-    section {
-      margin-top: 100px;
-      padding: 20px;
-      border: 1px solid #ddd;
-    }
-  </style>
+  <link rel="stylesheet" href="styleSAVOI.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
 
+  <a href="index.html" class="home-icon">
+    <i class="fa fa-home"></i>
+  </a>
+
+  <!-- Hamburger Menu Button -->
+  <div class="hamburger-menu">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+
   <!-- Table of Contents -->
-  <div id="sommaire">
+  <div id="sommaire" class="hidden">
     <h2>Sommaire</h2>
     <ol>
       <li><a href="#section1">Katazome</a></li>
@@ -41,6 +41,48 @@
     <p>This section contains detailed information about the topic.</p>
   </section>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const sommaire = document.getElementById('sommaire');
+  const homeIcon = document.querySelector('.home-icon');
+
+  // Ensure home icon is visible and clickable
+  if (homeIcon) {
+    homeIcon.addEventListener('click', (e) => {
+      e.preventDefault(); // Prevent default link behavior
+      window.location.href = 'index.html'; // Direct to home page
+    });
+  }
+
+  // Hamburger menu toggle
+  hamburger.addEventListener('click', () => {
+    sommaire.classList.toggle('hidden');
+    hamburger.classList.toggle('active');
+  });
+
+  // Scroll to top functionality
+  const scrollToTopButton = document.createElement('div');
+  scrollToTopButton.classList.add('scroll-to-top');
+  scrollToTopButton.innerHTML = '&#9650;'; // Up arrow symbol
+  document.body.appendChild(scrollToTopButton);
+
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      scrollToTopButton.classList.add('show');
+    } else {
+      scrollToTopButton.classList.remove('show');
+    }
+  });
+
+  scrollToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
+  </script>
 
 </body>
 </html>
