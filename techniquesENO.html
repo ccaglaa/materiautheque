@@ -65,8 +65,28 @@
   </section>
 
   <section id="section4">
-    <h2>Gaufrage</h2>
-    <p>This is the conclusion section, summarizing the content.</p>
+    <div id="gaufrage">
+      <h2>Gaufrage</h2>
+      <div class="content">
+        <div class="slideshow-container">
+          <!-- The slideshow images -->
+          <div class="slides">
+            <img src="img1.jpeg" alt="gaufre 1" class="slide active">
+            <img src="img2.jpeg" alt="gaufre 2" class="slide">
+          </div>
+          
+          <!-- Navigation arrows -->
+          <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        
+        <div class="text-container">
+          <p>Processus d'ennoblissement du tissu qui permet de conférer à l'étoffe un dessin légèrement en relief sur sa surface. L'embossage est réalisé en utilisant deux matrices, une avec la forme et, par opposition, une autre avec la contre-forme, le papier étant alors pressé entre les deux.
+            Un effet gaufré peut également être obtenu par application de matières, comme <a href="">la pâte gonflante</a> ou encore la <a href="matieresNATUR.html#section2">pâte de riz</a> comme alternative
+            </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="section5">
@@ -182,8 +202,36 @@
     });
   });
 });
-  </script>
 
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+  // Remove active class from all slides
+  slides.forEach(slide => {
+    slide.classList.remove('active');
+  });
+  
+  // Handle wrapping around at the ends
+  if (index >= slides.length) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = index;
+  }
+  
+  // Show the current slide
+  slides[currentSlide].classList.add('active');
+}
+
+function changeSlide(direction) {
+  showSlide(currentSlide + direction);
+}
+
+// Initialize the first slide
+showSlide(currentSlide);
+  </script>
 
 
 </body>
