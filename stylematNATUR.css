@@ -288,7 +288,7 @@ p {
   /* Slideshow container styling */
 .slideshow-container {
   position: relative;
-  width: 300px; /* Set your desired width */
+  width: 100px; /* Set your desired width */
   height: 150px; /* Set your desired height */
 }
 
