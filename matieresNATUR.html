@@ -41,19 +41,27 @@
         </ul>
       </ul>
       </li> 
-      <li><a href="#section2">Pâtes & Poudres</a></li>
+      <li><a href="#section2">Pâtes</a></li>
+      <ul>
+        <li>Jiire</li>
+        <li>Gojiru</li>
+        <li>Konnyaku</li>
+        <li>Pâtes de Riz (Katanori)</li>
+      </ul>
+      <li><a href="#section5">Poudres & Graines</a></li>
       <ul>
         <li>Chaux</li>
-        <li>Graines de Soja - Farine de Soja - Gojiru - Jiire</li>
+        <li>Farine de Soja</li>
+        <li>Graines de Soja</li>
+        <li>Farine de Riz</li>
+        <li>Son de Riz</li>
         <li>Gomme guar</li>
-        <li>Konnyaku</li>
-        <li>Farine de Riz - Pâtes de Riz - Son de Riz</li>
       </ul>
-      <li><a href="#section3">Pigments & Racines</a></li>
+      <li><a href="#section3">Colorants</a></li>
       <ul>
         <li>Acacia</li>
         <li>Alnus firma→ tabac beige</li>
-        <li>Aluminum → “</li>
+        <li>Aluminum </li>
         <li>Areca catechu→ rose pâle </li>
         <li>Black tea leaves → beige blanc </li>
         <li>Bois de campêche ( non décocté) </li>
@@ -97,6 +105,7 @@
     </ol>
   </div>
 
+
   <!-- Page Sections -->
   <section id="section1">
     <h2>Fibres</h2>
@@ -104,25 +113,97 @@
   </section>
 
   <section id="section2">
-    <h2>Pâtes & Poudres</h2>
-    <h3>Gojiru</h3>
-    <p>
-      Caractéristiques : Il est dit que le soja d’Hokkaido a un goût plus sucré, ce qui fait de cette préfecture la première 
-      productrice du Japon. C’est là que se fournissaient traditionnellement les artisans du textiles. En effet la méthode de
-      préteinture au jus de soja est utilisée au Japon depuis longtemps. Le jus de soja contient beaucoup de protéines végétales,
-      de ce fait il est utilisé pour fixer la couleur, l’enrober, l’empêcher de dégorger et protéger la pâte de réserve. Ce jus est
-      obtenu en faisant tremper des fèves de soja dans de l’eau et en les filtrant. On l’appelle le « gojiru ». Pour la technique
-      Ryukyu Bingata, les pigments sont mélangés à ce jus de soja et frottés sur le tissu pour le colorer. Lors de la teinture 
-      Hikizome (la teinture au pinceau ),  le tissu est plongé dans du jus de soja et trempé ou brossé pour créer une base pour la 
-      teinture. 
-      Recette : La méthode de préteinture au Gojiru: La veille : faire tremper des fèves de soja séchées (100 gr pour 500 ml d’eau) 
-      dans de l’eau pendant une nuit puis mixez les 1 minute et filtrez ensuite. Tremper le tissu dans le jus de fèves pendant 5 
-      minutes Sécher complètement au soleil.  Ne convient pas pour l’usage alimentaire.
-    </p>
+    <h2>Pâtes</h2>
+    <div id="pateriz">
+      <h2>Pâte de Riz (Katanori)</h2>
+      <div class="content">
+        <div class="slideshow-container" id="slideshow1">
+          <!-- The slideshow images -->
+          <div class="slides">
+            <img src="pateriz.jpeg" alt="Pâte de Riz 1" class="slide active">
+            <img src="pateriz2.jpeg" alt="Pâte de Riz 2" class="slide">
+        
+          </div>
+          
+          <!-- Navigation arrows -->
+          <button class="prev-btn" onclick="changeSlide(-1, slideshow1)">&#10094;</button>
+          <button class="next-btn" onclick="changeSlide(1, slideshow1)">&#10095;</button>
+        </div>
+        <div class="text-container">
+          <p>Pâte composé de <a href="#section5">son de riz</a> et <a href="#section5">farine de riz</a>. Ces derniers sont cuits à la vapeur puis mixés avec de l'eau et un peu de chaux. </p>
+          <p>Très utilisée dans la technique traditionnelle japonaise du <a href="savoirfaire.html">Katazome</a>. </p>
+          <p>Suite à de nombreuses expérimentations, nous avons observé qu'un séchage intense de cette matière peut conférer au tissu un effet <a href="techniquesENO.html#section4">gaufré</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <section id="section5">
+  <h2>Poudres</h2>
+  
+  <!-- First product: Son de Riz -->
+  <div id="son-de-riz" class="product">
+    <h3>Son de Riz</h3>
+    <div class="content">
+      <div class="slideshow-container" id="slideshow-son">
+        <div class="slides">
+          <img src="tas.jpeg" alt="son de riz" class="slide active">
+          <!-- Add more images here if needed -->
+        </div>
+        
+        <!-- Navigation arrows with fixed quotes around ID -->
+        <button class="prev-btn" onclick="changeSlide(-1, 'slideshow-son')">&#10094;</button>
+        <button class="next-btn" onclick="changeSlide(1, 'slideshow-son')">&#10095;</button>
+      </div>
+      <div class="text-container">
+        <p>Enveloppe du grain de riz.</p>
+        <p>Dégraissé et finement moulu.</p>
+        <p>Le son de riz est un des ingrédients nécessaires pour fabriquer la pâte de réserve à la japonaise. 
+          Très prisé en Asie pour ses valeurs nutritionnelles et cosmétiques, il est également utilisé au Japon par les artisans teinturiers.</p>
+        <p>Il est dégraissé et finement moulu. 
+          Veillez à ne pas confondre celui-ci avec le son de riz ordinaire que 
+          l'on trouve facilement dans les rayons des magasins d'alimentation. 
+          Son rôle est de réduire l'élasticité de la farine de riz afin de faciliter la manipulation de la pâte</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Second product: Farine de Riz -->
+  <div id="farine-de-riz" class="product">
+    <h3>Farine de Riz</h3>
+    <div class="content">
+      <div class="slideshow-container" id="slideshow-farine">
+        <div class="slides">
+          <img src="tas.jpeg" alt="farine de riz" class="slide active">
+          <!-- Add more images here if needed -->
+        </div>
+        
+        <!-- Navigation arrows with fixed quotes around ID -->
+        <button class="prev-btn" onclick="changeSlide(-1, 'slideshow-farine')">&#10094;</button>
+        <button class="next-btn" onclick="changeSlide(1, 'slideshow-farine')">&#10095;</button>
+      </div>
+      <div class="text-container">
+        <p>La farine de riz est un des ingrédients nécessaires pour fabriquer la pâte de réserve d'indigo à la japonaise.  
+          La technique “Katazome“, qui utilise cette pâte de riz (farine de riz et son de riz), 
+          permet de créer des motifs en réserve sur un tissu teint à l'indigo.</p>
+        
+        <p>La première étape est de créer le pochoir du motif souhaité. 
+          Il est posé sur le tissu, puis la pâte de réserve est appliquée dans les interstices du pochoir. 
+          Le tissu est teinté.
+        </p>
+        <p>
+          La pâte de riz se dissout au lavage et laisse apparaître les motifs non teints, 
+          donc de la couleur du tissu.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
   <section id="section3">
-    <h2>Pigments & Racines</h2>
+    <h2>Colorants</h2>
     <p>This section contains detailed information about the topic.</p>
   </section>
 
@@ -165,6 +246,7 @@
     
     
   </section>
+  
   <script>
     document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger-menu');
@@ -206,6 +288,46 @@
     });
   });
 });
+  // Keep track of current slides for each slideshow
+const slideshows = {
+  'slideshow1': 0,
+  'slideshow-son': 0,
+  'slideshow-farine': 0 
+};
+
+function showSlide(index, slideshowId) {
+  const slides = document.querySelectorAll(`#${slideshowId} .slide`);
+  
+  // Remove active class from all slides in this slideshow
+  slides.forEach(slide => {
+    slide.classList.remove('active');
+  });
+  
+  // Handle wrapping around at the ends
+  if (index >= slides.length) {
+    slideshows[slideshowId] = 0;
+  } else if (index < 0) {
+    slideshows[slideshowId] = slides.length - 1;
+  } else {
+    slideshows[slideshowId] = index;
+  }
+  
+  // Show the current slide
+  slides[slideshows[slideshowId]].classList.add('active');
+}
+
+function changeSlide(direction, slideshowId) {
+  showSlide(slideshows[slideshowId] + direction, slideshowId);
+}
+
+// Initialize all slideshows
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize each slideshow with its first slide
+  Object.keys(slideshows).forEach(id => {
+    showSlide(0, id);
+  });
+});
+    
   </script>
 
 </body>
