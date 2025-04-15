@@ -33,7 +33,39 @@
   <!-- Page Sections -->
   <section id="section1">
     <h2>Katazome</h2>
-    <p>This is the introduction section. It provides an overview of the content.</p>
+    <div id="katazome">
+      <div class="content">
+        <div class="slideshow-container" id="slideshow1">
+          <!-- The slideshow images -->
+          <div class="slides">
+            <div class="slide active">
+              <img src="katazome1.jpeg" alt="katazome1">
+              <p>Depôt du pochoir (Katagami)</p>
+            </div>
+            <div class="slide">
+              <img src="katazome3.jpeg" alt="katazome2">
+              <p>Application de la pâte de riz (Katanori)</p>
+            </div>
+            <div class="slide">
+              <img src="katazome2.jpeg" alt="katazome3">
+              <p>Teinture a la brosse (Hikizome)</p>
+            </div>
+          </div>
+          
+          <!-- Navigation arrows -->
+          <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+          <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <div class="text-container">
+          
+          <p>
+            Technique traditionnelle japonaise de teinture en réserve. Le principe technique consiste à appliquer une pâte 
+            résistante à la teinture, dite <a href="pateriz">katanori</a> avec un pochoir (<a href="idk">katagami</a>). Une fois la pâte sèche, le tissu est teint, puis la pâte résistante est éliminée pour laisser apparaître le motif.
+
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="section2">
@@ -82,6 +114,36 @@
     });
   });
 });
+
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function changeSlide(n) {
+  // Hide current slide
+  slides[slideIndex].classList.remove('active');
+  
+  // Calculate new slide index
+  slideIndex += n;
+  
+  // Loop back to first or last slide if needed
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  } else if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  
+  // Show new slide
+  slides[slideIndex].classList.add('active');
+}
+
+// Initialize first slide
+document.addEventListener('DOMContentLoaded', function() {
+  // Show first slide
+  if (slides.length > 0) {
+    slides[0].classList.add('active');
+  }
+});
+    
   </script>
 
 </body>
