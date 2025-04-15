@@ -2,14 +2,14 @@
 
 @font-face {
   font-family: 'Krungthep';
-  src: url('fonts/krungthep\ 2.ttf') format('truetype');
+  src: url('Hello-Notie.otf') format('truetype');
 }
 
 body {
     margin: 0;
     font-family: 'Krungthep';
     color: #1d3e4c;
-    background-color: #d2e8da;
+    background-color: #fff2e6;
   }
   
   /* Header Styling */
@@ -17,8 +17,8 @@ body {
     display: flex;
     align-items: center;
     padding: 20px 50px;
-    background-color: #d2e8da;
-    border-bottom: 1px solid #d2e8da;
+    background-color: #fff2e6;
+    border-bottom: 1px solid #fff2e6;
     position: relative;
     justify-content: center; /* Center the menu */
   }
@@ -55,13 +55,14 @@ body {
     font-family: 'Krungthep';
     text-align: center;
     padding: 100px 20px;
-    background: #d2e8da;
+    background: #fff2e6;
   }
   
   .hero h1 {
-    font-size: 64px;
+    /*letter-spacing: 2px;*/
+    font-size: 86px;
     line-height: 1.2;
-    font-weight: bold;
+    /*font-weight: bold;*/
   }
 
   .hero h4 {
@@ -126,7 +127,7 @@ body {
 
   #menu {
     margin: 0 200px;
-    background: #d2e8da;
+    background: #fff2e6;
     height: 49px;
     border-radius: 0px;
     justify-content: center; /* Center the menu */
@@ -200,7 +201,7 @@ body {
 
   }
   #menu ul.sub-menus a {
-    color: #d2e8da;
+    color: #fff2e6;
     font-size: 14px;
     white-space: normal; /* Allow text to wrap */
   }
