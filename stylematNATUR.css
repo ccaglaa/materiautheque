@@ -114,8 +114,9 @@ p {
   flex: 1;
   width: 50px;
   height: auto;
-  max-height: 350px;
+  max-height: 450px;
   overflow-y: auto;
+  overflow: visible; /* Remove any overflow scrolling */
 }
 
 #section4 {
@@ -338,4 +339,155 @@ p {
 
 .text-container {
   flex: 1;
+}
+
+/* Three-column layout CSS */
+
+/* General section styling */
+#section2 {
+  min-height: auto; /* Change from any fixed value to auto */
+  height: auto; /* Ensure height is auto */
+  overflow: visible; /* Change from hidden or auto to visible */
+}
+
+/* Katanori container */
+.katanori-container {
+  background-color: #E4E3A5; /* Yellow background from screenshot */
+  padding: 20px;
+  margin: 0;
+  font-family: 'Krungthep', sans-serif;
+}
+
+.katanori-container h2 {
+  color: #49274A;
+  margin-bottom: 20px;
+  font-size: 28px;
+  text-align: left;
+}
+
+/* Three-column layout container */
+.three-column-layout {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Common column styles */
+.column {
+  padding: 0 10px;
+}
+
+/* Image column (left) */
+.image-column {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+/* Info column (middle) */
+.info-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Experiments column (right) */
+.experiments-column {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+/* Caption for image */
+.katanori-caption {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* Composition styling */
+.katanori-composition p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/* Recipe section */
+.katanori-recipe h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.recipe-list {
+  list-style-type: none;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.recipe-list li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.recipe-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+
+}
+
+/* Experiments section */
+.katanori-experiments h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Link highlighting */
+.highlight {
+  color: #66CDAA;
+  text-decoration: none;
+}
+
+.highlight:hover {
+  text-decoration: underline;
+}
+
+/* Text styling within container */
+.katanori-container p {
+  font-family: 'Krungthep', sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  max-width: 100%;
+  color: #333;
+}
+
+/* Slideshow adjustments 
+.slideshow-container {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.slide {
+  height: 300px;
+  object-fit: cover;
+}
+  */
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 960px) {
+  .three-column-layout {
+    flex-direction: column;
+  }
+  
+  .column {
+    width: 100%;
+  }
+  
+  .image-column, .info-column, .experiments-column {
+    width: 100%;
+  }
 }
