@@ -396,10 +396,12 @@ p {
 
 /* Caption for image */
 .katanori-caption {
+  position: relative;
+  margin-top: 250px; /* Adjust this value to position below the slideshow */
+  text-align: left;
   font-size: 14px;
-  text-align: center;
-  margin-top: 5px;
-  color: #333;
+  color: #49274A;
+  padding-top: 10px;
 }
 
 /* Composition styling */
@@ -460,6 +462,11 @@ p {
   margin-bottom: 10px;
   max-width: 100%;
   color: #333;
+}
+
+.slideshow-container {
+  position: relative;
+  margin-bottom: 20px;
 }
 
 /* Slideshow adjustments 
