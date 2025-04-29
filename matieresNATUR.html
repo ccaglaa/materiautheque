@@ -126,9 +126,11 @@
             <img src="pateriz.jpeg" alt="Pâte de Riz 1" class="slide active">
             <img src="pateriz2.jpeg" alt="Pâte de Riz 2" class="slide">
           </div>
-          <button class="prev-btn" onclick="changeSlide(-1, slideshow1)">&#10094;</button>
-          <button class="next-btn" onclick="changeSlide(1, slideshow1)">&#10095;</button>
-        </div>
+          
+          <!-- Updated buttons with quotes around the ID -->
+          <button class="prev-btn" onclick="changeSlide(-1, 'slideshow1')">&#10094;</button>
+          <button class="next-btn" onclick="changeSlide(1, 'slideshow1')">&#10095;</button>
+        </div>        
         <div class="katanori-caption">Pâte de riz et racles en bois</div>
       </div>
       
@@ -206,8 +208,8 @@
         </div>
         
         <!-- Navigation arrows with fixed quotes around ID -->
-        <button class="prev-btn" onclick="changeSlide(-1, 'slideshow-farine')">&#10094;</button>
-        <button class="next-btn" onclick="changeSlide(1, 'slideshow-farine')">&#10095;</button>
+        <button class="prev-btn" onclick="changeSlide(-1, 'slideshow1')">&#10094;</button>
+        <button class="next-btn" onclick="changeSlide(1, 'slideshow1')">&#10095;</button>
       </div>
       <div class="text-container">
         <p>La farine de riz est un des ingrédients nécessaires pour fabriquer la pâte de réserve d'indigo à la japonaise.  
@@ -315,7 +317,7 @@
   });
 });
   // Keep track of current slides for each slideshow
-const slideshows = {
+  const slideshows = {
   'slideshow1': 0,
   'slideshow-son': 0,
   'slideshow-farine': 0 
@@ -343,7 +345,12 @@ function showSlide(index, slideshowId) {
 }
 
 function changeSlide(direction, slideshowId) {
-  showSlide(slideshows[slideshowId] + direction, slideshowId);
+  // Get current index for this slideshow
+  const currentIndex = slideshows[slideshowId] || 0;
+  // Calculate new index
+  const newIndex = currentIndex + direction;
+  // Update the slide
+  showSlide(newIndex, slideshowId);
 }
 
 // Initialize all slideshows
@@ -353,7 +360,6 @@ document.addEventListener('DOMContentLoaded', function() {
     showSlide(0, id);
   });
 });
-    
   </script>
 
 </body>
